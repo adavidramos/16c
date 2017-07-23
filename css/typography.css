@@ -1,11 +1,78 @@
 
 body {
 	font-family: Neuton, Georgia, "Times New Roman",Times,serif;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.5em;
 	color: #222;
 }
 
 h1 {
+	margin: 2em 0 0.35em 0;
 	font-weight: normal;
+	font-size: 2em;
+}
+
+h2 {
+	margin: 0 0 3em 0;
+	font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-weight: 400;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+}
+
+ul {
+	margin: 0 0 0.25em 0;
+	padding: 0;
+	border: 1px solid #fdd;
+	border-top: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+li i {
+	font-size: 0.8em;
+	padding: 0 0 0 0.5em;
+	font-style: normal;
+	color: #666;
+}
+
+li a {
+	display: block;
+	padding: 0.5em 1em;
+	border-top: 1px solid #fdd;
+	border-left: 1px solid #fdd;
+	text-decoration: none;
+	color: inherit;
+}
+
+li a:hover {
+	background-color: #f66;
+	color: #fee;
+}
+
+li a:hover i {
+	color: #fee;
+}
+
+
+p a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p a:hover {
+	color: #f66;
+	border-bottom: 1px solid #fdd;
+}
+
+.note {
+	font-size: 0.8em;
+}
+
+.contact {
+	margin: 3em 0 0 0;
 }
