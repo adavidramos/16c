@@ -22,8 +22,8 @@ hgroup, header, footer, address, nav {
 	margin-bottom: 1em;
 	margin-left: auto;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 800px;
 	padding: 2em;
-	border: 1px solid #eee;
+	/*border: 1px solid #eee;*/
 }
 

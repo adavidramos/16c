@@ -1,7 +1,11 @@
 
 body {
-	font-family: Georgia, "Times New Roman",Times,serif;
-	font-size: 16px;
+	font-family: Neuton, Georgia, "Times New Roman",Times,serif;
+	font-size: 18px;
 	line-height: 1.5em;
 	color: #222;
+}
+
+h1 {
+	font-weight: normal;
 }
