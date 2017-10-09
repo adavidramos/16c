@@ -14,10 +14,16 @@ h1 {
 
 h2 {
 	margin: 0 0 3em 0;
+	font-weight: normal;
+	font-size: 1.125em;
+}
+
+h3 {
+	margin: 2em 0 1em 0;
 	font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-weight: 400;
-	font-size: 0.85em;
+	font-size: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
 }
