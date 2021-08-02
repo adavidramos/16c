@@ -69,6 +69,7 @@ li a:hover i {
 p a {
 	color: #f66;
 	border-bottom: 1px solid #fdd;
+	text-decoration: none;
 }
 
 p a:hover {
@@ -76,10 +77,20 @@ p a:hover {
 	color: #fee;
 }
 
+
+
+
 .note {
 	font-size: 0.8em;
 }
 
 .contact {
 	margin: 3em 0 0 0;
+}
+
+.front-hed {
+	font-size: 12rem;
+	font-weight: normal;
+	line-height: 0.8em;
+	color: #c41a4d;
 }
