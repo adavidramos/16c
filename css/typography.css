@@ -1,12 +1,13 @@
 
 body {
-	font-family: Neuton, Georgia, "Times New Roman",Times,serif;
+	font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
 	font-size: 20px;
 	line-height: 1.5em;
-	color: #222;
+	color: #25236a;
 }
 
 h1 {
+	font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
 	margin: 2em 0 0.35em 0;
 	font-weight: normal;
 	font-size: 2em;
@@ -20,18 +21,18 @@ h2 {
 
 h3 {
 	margin: 2em 0 1em 0;
-	font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	font-weight: 400;
+	font-family: "IBM Plex Sans", Verdana, sans-serif;
+	font-weight: bold;
+	font-weight: 600;
 	font-size: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
+	color: #d2416d;
 }
 
 ul {
 	margin: 0 0 0.25em 0;
 	padding: 0;
-	border: 1px solid #fdd;
 	border-top: none;
 }
 
@@ -49,14 +50,15 @@ li i {
 li a {
 	display: block;
 	padding: 0.5em 1em;
-	border-top: 1px solid #fdd;
-	border-left: 1px solid #fdd;
+	border-top: 1px solid #abe4e9;
+	background: #e9fdff;
 	text-decoration: none;
 	color: inherit;
 }
 
 li a:hover {
-	background-color: #f66;
+	border-color: #d2416d;
+	background-color: #d2416d;
 	color: #fee;
 }
 
@@ -67,13 +69,13 @@ li a:hover i {
 
 
 p a {
-	color: #f66;
-	border-bottom: 1px solid #fdd;
+	color: #d2416d;
+	border-bottom: 1px solid #d2416d;
 	text-decoration: none;
 }
 
 p a:hover {
-	background-color: #f66;
+	background-color: #d2416d;
 	color: #fee;
 }
 
@@ -89,8 +91,11 @@ p a:hover {
 }
 
 .front-hed {
-	font-size: 12rem;
+	margin: 6rem 0 1rem 0;
+	font-family: "IBM Plex Sans", Verdana, sans-serif;
+	font-size: 8rem;
 	font-weight: normal;
+	font-weight: 400;
 	line-height: 0.8em;
-	color: #c41a4d;
+	color: #d2416d;
 }
