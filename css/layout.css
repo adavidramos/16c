@@ -150,7 +150,18 @@ hgroup, header, footer, address, nav {
 	padding: 0 0 0 2em;
 }
 
-/* inside pages global nav */
+.inside-main {
+	grid-column: 2 / 9;
+	grid-row: 3;
+	padding: 2em 2em 2em 2em;
+}
+
+.inside-footer {
+	padding-top: 3em;
+	padding-left: 0;
+}
+
+/* inside pages - global nav */
 .global-nav {
 	grid-column: 2 / -1;
 	grid-row: 1 / 2;
@@ -166,21 +177,24 @@ hgroup, header, footer, address, nav {
 	font-family: "IBM Plex Sans", Verdana, sans-serif;
 }
 
-.inside-main {
-	grid-column: 2 / 9;
-	grid-row: 3;
-	padding: 2em 2em 2em 2em;
-}
-
-.inside-footer {
-	padding-top: 3em;
-	padding-left: 0;
-}
-
+/* inside pages - mobile */
 @media (max-width: 960px) {
 	
 	.inside-container {
 		display: block;
 	}
 
+}
+
+
+
+
+/* special pages */
+
+.redline-page {
+	background: #e3d8ec;
+}
+.redline-page .global-nav a,
+.redline-page .global-nav a:visited {
+	background-color: #f2e8f9;	
 }
