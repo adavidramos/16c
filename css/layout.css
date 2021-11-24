@@ -48,6 +48,16 @@ hgroup, header, footer, address, nav {
 	padding: 0 0 0 2em;
 }
 
+.front-hed {
+	margin: 3rem 0 1rem 0;
+	font-family: "IBM Plex Sans", Verdana, sans-serif;
+	font-size: 4rem;
+	font-weight: normal;
+	font-weight: 400;
+	line-height: 0.8em;
+	color: #d2416d;
+}
+
 .front-text {
 	grid-column: 2 / 9;
 	grid-row: 5;
@@ -165,4 +175,12 @@ hgroup, header, footer, address, nav {
 .inside-footer {
 	padding-top: 3em;
 	padding-left: 0;
+}
+
+@media (max-width: 960px) {
+	
+	.inside-container {
+		display: block;
+	}
+
 }
