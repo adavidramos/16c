@@ -11,6 +11,7 @@ h1 {
 	margin: 2em 0 0.35em 0;
 	font-weight: normal;
 	font-size: 2em;
+	line-height: 1.125em;
 }
 
 h2 {
@@ -27,6 +28,11 @@ h3 {
 	font-size: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
+	color: #d2416d;
+}
+h3 a,
+h3 a:visited {
+	text-decoration: none;
 	color: #d2416d;
 }
 
