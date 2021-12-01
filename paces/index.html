@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pace calculator</title>
+	<meta name="description" content="">
+	
+	<!-- Enable responsive layouts; tell browsers not to shrink pages to fit small screens -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://get.mavo.io/stable/mavo.min.js"></script>
+	<link rel="stylesheet" href="https://get.mavo.io/stable/mavo.min.css">
+
+	<!-- Load styles -->
+	<!-- For production, combine all of the stylesheets -->
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- Webfonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+
+</head>
+<body class="homepage">
+<!-- Change this classname for each page/type! -->
+
+	<!-- Page content typically goes inside the container -->
+	<div class="container">
+
+		<article mv-app="mavoCalc">
+			
+			<h1>Two quick lap/pace calculators</h1>
+						
+			<section id="ptt">
+				
+				<h3>Pace to time</h3>
+
+				<p>I'm planning to run 				
+
+					<input property="ptt_meters" type="text" minlength="1" maxlength="4" size="4">
+					meters
+					at
+					<input property="ptt_min_mi" type="text" minlength="1" maxlength="2" size="2">
+					:
+					<input property="ptt_sec_mi" type="text" minlength="2" maxlength="2" size="2">
+					min:sec/mi.
+				</p>
+				
+				<meta property="ptt_total_sec_mi" content="[ptt_sec_mi + ptt_min_mi * 60]">
+				<meta property="ptt_sec_meter" content="[ptt_total_sec_mi / 1600]">
+
+				<meta property="ptt_total_sec_rep" content="[ptt_sec_meter * ptt_meters]">
+				<meta property="ptt_min_rep" content="[digits(2,0,ptt_total_sec_rep/60)]">
+				<meta property="ptt_sec_rep" content="[digits(2,0,ptt_total_sec_rep - ptt_min_rep * 60)]">
+
+				<meta property="ptt_total_sec_lap" content="[ptt_sec_meter * 400]">
+				<meta property="ptt_min_lap" content="[digits(2,0,ptt_total_sec_lap/60)]">
+				<meta property="ptt_sec_lap" content="[digits(2,0,ptt_total_sec_lap - ptt_min_lap * 60)]">
+
+				<meta property="ptt_total_sec_lap2" content="[ptt_total_sec_lap * 2]">
+				<meta property="ptt_min_lap2" content="[digits(2,0,ptt_total_sec_lap2/60)]">
+				<meta property="ptt_sec_lap2" content="[digits(2,0,ptt_total_sec_lap2 - ptt_min_lap2 * 60)]">
+
+				<meta property="ptt_total_sec_lap3" content="[ptt_total_sec_lap * 3]">
+				<meta property="ptt_min_lap3" content="[digits(2,0,ptt_total_sec_lap3/60)]">
+				<meta property="ptt_sec_lap3" content="[digits(2,0,ptt_total_sec_lap3 - ptt_min_lap3 * 60)]">
+							
+				<p>
+					That's:
+				</p
+				
+				<p>
+					<span mv-if="ptt_meters > 400">
+						400 meters in <b>[ptt_min_lap]:[ptt_sec_lap]</b> min:sec<br>
+					</span>
+					<span mv-if="ptt_meters > 800">
+						800 meters in <b>[ptt_min_lap2]:[ptt_sec_lap2]</b> min:sec<br>
+					</span>
+					<span mv-if="ptt_meters > 1200">
+						1200 meters in <b>[ptt_min_lap3]:[ptt_sec_lap3]</b> min:sec<br>
+					</span>
+					[ptt_meters] meters in <b>[ptt_min_rep]:[ptt_sec_rep]</b> min:sec
+				</p>
+
+				
+			</section>
+
+
+
+
+			<section id="ptt">
+				
+				<h3>Lap time to pace</h3>
+
+				<p>I ran 				
+					<input property="lp_meters" type="text" minlength="1" maxlength="4" size="4">
+					meters.
+					<meta property="lp_mi" content="[lp_meters / 1600]">
+				</p>
+		
+				<p>
+					Lap 1
+					—
+					<input property="lp1_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp1_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp1_total_sec" content="[lp1_min * 60 + lp1_sec]">
+					<meta property="lp1_sec_mi" content="[lp1_total_sec/lp_mi]">
+					<meta property="lp1_pace_min" content="[digits(2,0,lp1_sec_mi/60)]">
+					<meta property="lp1_pace_sec" content="[digits(2,0,lp1_sec_mi - lp1_pace_min * 60)]">
+
+					= 
+					<b>[lp1_pace_min]:[lp1_pace_sec]</b> min/mi
+				</p>
+				
+				<p>
+					Lap 2
+					—
+					<input property="lp2_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp2_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp2_total_sec" content="[lp2_min * 60 + lp2_sec]">
+					<meta property="lp2_sec_mi" content="[lp2_total_sec/lp_mi]">
+					<meta property="lp2_pace_min" content="[digits(2,0,lp2_sec_mi/60)]">
+					<meta property="lp2_pace_sec" content="[digits(2,0,lp2_sec_mi - lp2_pace_min * 60)]">
+
+					= 
+					<b>[lp2_pace_min]:[lp2_pace_sec]</b> min/mi
+				</p>
+
+				<p>
+					Lap 3
+					—
+					<input property="lp3_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp3_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp3_total_sec" content="[lp3_min * 60 + lp3_sec]">
+					<meta property="lp3_sec_mi" content="[lp3_total_sec/lp_mi]">
+					<meta property="lp3_pace_min" content="[digits(2,0,lp3_sec_mi/60)]">
+					<meta property="lp3_pace_sec" content="[digits(2,0,lp3_sec_mi - lp3_pace_min * 60)]">
+
+					= 
+					<b>[lp3_pace_min]:[lp3_pace_sec]</b> min/mi
+				</p>
+			
+				<p>
+					Lap 4
+					—
+					<input property="lp4_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp4_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp4_total_sec" content="[lp4_min * 60 + lp4_sec]">
+					<meta property="lp4_sec_mi" content="[lp4_total_sec/lp_mi]">
+					<meta property="lp4_pace_min" content="[digits(2,0,lp4_sec_mi/60)]">
+					<meta property="lp4_pace_sec" content="[digits(2,0,lp4_sec_mi - lp4_pace_min * 60)]">
+
+					= 
+					<b>[lp4_pace_min]:[lp4_pace_sec]</b> min/mi
+				</p>
+
+				<p>
+					Lap 5
+					—
+					<input property="lp5_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp5_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp5_total_sec" content="[lp5_min * 60 + lp5_sec]">
+					<meta property="lp5_sec_mi" content="[lp5_total_sec/lp_mi]">
+					<meta property="lp5_pace_min" content="[digits(2,0,lp5_sec_mi/60)]">
+					<meta property="lp5_pace_sec" content="[digits(2,0,lp5_sec_mi - lp5_pace_min * 60)]">
+
+					= 
+					<b>[lp5_pace_min]:[lp5_pace_sec]</b> min/mi
+				</p>
+
+				<p>
+					Lap 6
+					—
+					<input property="lp6_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp6_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp6_total_sec" content="[lp6_min * 60 + lp6_sec]">
+					<meta property="lp6_sec_mi" content="[lp6_total_sec/lp_mi]">
+					<meta property="lp6_pace_min" content="[digits(2,0,lp6_sec_mi/60)]">
+					<meta property="lp6_pace_sec" content="[digits(2,0,lp6_sec_mi - lp6_pace_min * 60)]">
+
+					= 
+					<b>[lp6_pace_min]:[lp6_pace_sec]</b> min/mi
+				</p>
+				
+				<p>
+					Lap 7
+					—
+					<input property="lp7_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp7_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp7_total_sec" content="[lp7_min * 60 + lp7_sec]">
+					<meta property="lp7_sec_mi" content="[lp7_total_sec/lp_mi]">
+					<meta property="lp7_pace_min" content="[digits(2,0,lp7_sec_mi/60)]">
+					<meta property="lp7_pace_sec" content="[digits(2,0,lp7_sec_mi - lp7_pace_min * 60)]">
+
+					= 
+					<b>[lp7_pace_min]:[lp7_pace_sec]</b> min/mi
+				</p>
+				
+				<p>
+					Lap 8
+					—
+					<input property="lp8_min" type="text" minlength="2" maxlength="2" size="2">
+					:
+					<input property="lp8_sec" type="text" minlength="2" maxlength="2" size="2">
+
+					<meta property="lp8_total_sec" content="[lp8_min * 60 + lp8_sec]">
+					<meta property="lp8_sec_mi" content="[lp8_total_sec/lp_mi]">
+					<meta property="lp8_pace_min" content="[digits(2,0,lp8_sec_mi/60)]">
+					<meta property="lp8_pace_sec" content="[digits(2,0,lp8_sec_mi - lp8_pace_min * 60)]">
+
+					= 
+					<b>[lp8_pace_min]:[lp8_pace_sec]</b> min/mi
+				</p>
+
+				
+			</section>
+
+			
+			<section>
+				<p>Note: the math is probably right. If the numbers <em>really</em> matter,
+				you should probably check the results.</p>
+			</section>		
+			
+		</article>
+
+
+
+	</div><!-- end container -->
+	
+</body>
+</html>
