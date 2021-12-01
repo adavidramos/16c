@@ -1,20 +1,35 @@
 
 
 body {
-	font-family: "Source Sans Pro", Verdana, Arial, sans-serif;
+	font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+	font-size: 20px;
+	line-height: 1.5em;
+	color: #25236a;
 }
 
 h1 {
-	font-family: "Source Serif Pro", Georgia, "Times New Roman", serif;
-	font-size: 2em;
+	font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+	margin: 2em 0 0.35em 0;
 	font-weight: normal;
+	font-size: 2em;
+	line-height: 1.125em;
+}
+
+h2 {
+	margin: 0 0 3em 0;
+	font-weight: normal;
+	font-size: 1.125em;
 }
 
 h3 {
-	font-size: 0.9em;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+	margin: 2em 0 1em 0;
+	font-family: "IBM Plex Sans", Verdana, sans-serif;
 	font-weight: bold;
+	font-weight: 600;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	color: #d2416d;
 }
 
 input {
@@ -38,11 +53,25 @@ b {
 	width: 80%;
 	margin: 2em auto 0 auto;
 	padding: 2em 4em 4em 4em;
-	background: #ebf5f6;
+	background: #e9fdff;
 }
 
 section {
 	margin: 2.5em 0 0 0;
 	padding: 0.5em 0 0 0;
 	border-top: 1px solid #bfd8da;
+}
+
+/* inside pages - global nav */
+.global-nav {
+	margin: 1em 0 1em 0;
+}
+.global-nav a,
+.global-nav a:visited {
+	padding: 0.25em 0.35em;
+	text-decoration: none;
+	color: #d2416d;
+	background-color: #f5dee5;	
+	font-size: 0.8em;
+	font-family: "IBM Plex Sans", Verdana, sans-serif;
 }
